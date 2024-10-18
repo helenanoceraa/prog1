@@ -8,10 +8,7 @@
 void cria_vetor(struct racional *p_vetor, int n){
     int i;
     for(i = 0; i < n; i++){
-        //printf("Numerador: ");      se for colocar um a um é bom ter mas se for colocar tudo junto vai printar várias vezes sem necessidade
         scanf("%ld", &p_vetor[i].num);
-
-        //printf("Denominador: ");
         scanf("%ld", &p_vetor[i].den);
     }
 }
@@ -22,7 +19,6 @@ void define_n(int *p_n){
 
   while(i == 0){
 
-    //printf("Tamanho do vetor ");
     scanf("%d", p_n);
 
     if(*p_n > 1 && *p_n < 100){
@@ -110,11 +106,12 @@ int main ()
 {
   int n;
   int *p_n = &n;
-  //long vetor[MAX];
-
+  long vetor[MAX];
+    
   struct racional vetor[MAX];
   struct racional *p_vetor = vetor;
   struct racional resultado;
+
 
   define_n(p_n);
 
